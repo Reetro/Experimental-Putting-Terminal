@@ -19,7 +19,7 @@ public class LevelLoader : MonoBehaviour
     /// </summary>
     public void LoadGameOver()
     {
-
+        Debug.LogWarning("Need an end level screen");
     }
 
     private IEnumerator LoadNextLevel()

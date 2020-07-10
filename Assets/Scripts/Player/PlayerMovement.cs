@@ -5,29 +5,41 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 	Camera mainCam;
-	[HideInInspector]
-	public Rigidbody2D rb;
-	public float movementSpeed;
-	public float maxFallingVelocity;
+	public float moveSpeed = 1;
 
-	float input = 0;
+	public bool FollowMouse = true;
+
+	Vector2 userInput = Vector2.zero;
+	Vector2 mousePosition = Vector2.zero;
 
 	void Awake()
 	{
 		mainCam = Camera.main;
-		rb = GetComponent<Rigidbody2D>();
 	}
+
 	void Update()
 	{
-		input = Input.GetAxisRaw("Horizontal");
-		if (rb.velocity.y < -maxFallingVelocity)
-		{
-			rb.velocity = new Vector2(rb.velocity.x, -maxFallingVelocity);
-		}
+		userInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+		mousePosition = mainCam.ScreenToWorldPoint(Input.mousePosition);
 	}
 
 	void FixedUpdate()
 	{
-		transform.Translate(Vector2.right * input * movementSpeed * Time.fixedDeltaTime);
+		if (Vector2.Distance(transform.position, mousePosition) > .1f)
+			transform.Translate(-userInput * moveSpeed * Time.fixedDeltaTime);
+
+		Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
+
+		if (FollowMouse)
+		{
+			transform.up = -direction;
+			transform.GetChild(0).up = transform.up;
+		}
+		else
+		{
+			transform.GetChild(0).up = direction;
+			transform.up = Vector2.up;
+		}
+
 	}
 }

@@ -29,6 +29,6 @@ public class PlayerMovement : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		rb.AddForce((Vector2.right * movementSpeed * input * Time.fixedDeltaTime),ForceMode2D.Impulse);
+		transform.Translate(Vector2.right * input * movementSpeed * Time.fixedDeltaTime);
 	}
 }

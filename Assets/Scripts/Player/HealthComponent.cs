@@ -7,7 +7,7 @@ public class HealthComponent : MonoBehaviour
     [Tooltip("The default health value the Gameobject has")]
     public float defaultHealth = 3f;
 
-    private float currentHealth = 0f;
+    public float currentHealth = 0f;
     private bool isDead = false;
 
     [System.Serializable]
@@ -38,6 +38,9 @@ public class HealthComponent : MonoBehaviour
             isDead = true;
 
             OnDeath.Invoke();
+
+            //TODO make better death system
+            Destroy(gameObject);
         }
     }
     /// <summary>

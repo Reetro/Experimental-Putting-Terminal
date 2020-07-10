@@ -17,7 +17,6 @@ public class PlayerMovement : MonoBehaviour
 		mainCam = Camera.main;
 		rb = GetComponent<Rigidbody2D>();
 	}
-
 	void Update()
 	{
 		input = Input.GetAxisRaw("Horizontal");

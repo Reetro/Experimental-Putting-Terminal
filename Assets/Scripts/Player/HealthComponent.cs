@@ -1,18 +1,58 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class HealthComponent : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("Health Settings")]
+    [Tooltip("The default health value the Gameobject has")]
+    public float defaultHealth = 3f;
+
+    private float currentHealth = 0f;
+    private bool isDead = false;
+
+    [System.Serializable]
+    public class TakeAnyDamge : UnityEvent<float> { }
+
+    [Header("Events")]
+    [Space]
+    public UnityEvent OnDeath;
+    [Space]
+    public TakeAnyDamge onTakeAnyDamage;
+
     void Start()
     {
-        
+        currentHealth = defaultHealth;
     }
-
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// Remove from current health
+    /// </summary>
+    /// <param name="amount"></param>
+    public void ApplyDamage(float amount)
     {
-        
+        currentHealth -= amount;
+
+        onTakeAnyDamage.Invoke(amount);
+
+        if (currentHealth <= 0)
+        {
+            isDead = true;
+
+            OnDeath.Invoke();
+        }
+    }
+    /// <summary>
+    /// Get current health of the Gameobject
+    /// </summary>
+    public float GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+    /// <summary>
+    /// Check to see if the current Gameobject is dead
+    /// </summary>
+    /// <returns></returns>
+    public bool GetIsDead()
+    {
+        return isDead;
     }
 }

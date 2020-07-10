@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 		if (FollowMouse)
 		{
 			transform.up = -direction;
-			transform.GetChild(0).up = Vector2.up;
+			transform.GetChild(0).up = transform.up;
 		}
 		else
 		{

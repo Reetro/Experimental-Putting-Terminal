@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour
     private Vector2 currentVelocity;
     private float lifeTime = 3f;
     private Player player;
+    private float maxSpeed = 10f;
 
     public Slider lifeTimeSlider = null;
 
@@ -21,10 +22,11 @@ public class Ball : MonoBehaviour
         currentVelocity = myRigidBody2d.velocity;
     }
 
-    public void ThrowBall(float speed, Player player, float ballLifeTime)
+    public void ThrowBall(float speed, Player player, float ballLifeTime, float maxSpeed)
     {
         this.player = player;
         lifeTime = ballLifeTime;
+        this.maxSpeed = maxSpeed;
 
         myRigidBody2d.velocity = transform.up * speed;
     }
@@ -36,7 +38,18 @@ public class Ball : MonoBehaviour
 
     public void IncreaseSpeed(float multipler)
     {
-        myRigidBody2d.velocity *= multipler;
+        Vector2 predictedVelocity = currentVelocity *= multipler;
+
+        if (predictedVelocity.magnitude >= maxSpeed)
+        {
+            var newVelocity = Vector2.ClampMagnitude(predictedVelocity, maxSpeed);
+
+            myRigidBody2d.velocity = newVelocity;
+        }
+        else
+        {
+            myRigidBody2d.velocity = predictedVelocity;
+        }
     }
 
     public void DecreaseSpeed(float divder)

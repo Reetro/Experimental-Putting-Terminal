@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
     private Rigidbody2D myRigidBody2d = null;
     private Vector2 currentVelocity;
-    
+    private float lifeTime = 3f;
+    private StaticPlayer player;
+
+    public Slider lifeTimeSlider = null;
+
     void Awake()
     {
         myRigidBody2d = GetComponent<Rigidbody2D>();
@@ -15,8 +20,10 @@ public class Ball : MonoBehaviour
         currentVelocity = myRigidBody2d.velocity;
     }
 
-    public void ThrowBall(float speed)
+    public void ThrowBall(float speed, StaticPlayer player)
     {
+        this.player = player;
+
         myRigidBody2d.velocity = transform.up * speed;
     }
 
@@ -25,9 +32,23 @@ public class Ball : MonoBehaviour
         myRigidBody2d.velocity = Vector2.zero;
     }
 
-    public void SlowBall(float slowAmount)
+    public void SlowBall(float slowAmount, float ballLifeTime)
     {
         myRigidBody2d.velocity *= slowAmount;
+    }
+
+    private void Update()
+    {
+        lifeTime -= Time.deltaTime;
+
+        lifeTimeSlider.value = lifeTime;
+
+        if (lifeTime <= 0)
+        {
+            player.playerBallCount++;
+
+            Destroy(gameObject);
+        }
     }
 
     public Vector2 GetCurrentVelocity()

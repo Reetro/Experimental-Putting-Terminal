@@ -36,7 +36,7 @@ public class StaticPlayer : MonoBehaviour
         {
             var ball = Instantiate(ballPrefab, (Vector2)spawnTransform.position, spawnTransform.rotation);
 
-            ball.GetComponent<Ball>().ThrowBall(ballSpeed);
+            ball.GetComponent<Ball>().ThrowBall(ballSpeed, this);
 
             playerBallCount--;
         }

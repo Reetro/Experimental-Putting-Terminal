@@ -8,12 +8,12 @@ public class StaticPlayer : MonoBehaviour
     public GameObject ballPrefab;
     public Transform spawnTransform;
     public int playerBallCount = 1;
+    public float ballSpeed = 2;
 
-    void Start()
+    void Awake()
     {
         mainCam = Camera.main;
     }
-
 
     void Update()
     {
@@ -36,7 +36,7 @@ public class StaticPlayer : MonoBehaviour
         {
             var ball = Instantiate(ballPrefab, (Vector2)spawnTransform.position, spawnTransform.rotation);
 
-            ball.GetComponent<Ball>().ThrowBall(10);
+            ball.GetComponent<Ball>().ThrowBall(ballSpeed);
 
             playerBallCount--;
         }

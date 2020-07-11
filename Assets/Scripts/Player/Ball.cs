@@ -34,6 +34,15 @@ public class Ball : MonoBehaviour
         myRigidBody2d.velocity = Vector2.zero;
     }
 
+    public void IncreaseSpeed(float multipler)
+    {
+        myRigidBody2d.velocity *= multipler;
+    }
+
+    public void DecreaseSpeed(float divder)
+    {
+        myRigidBody2d.velocity /= divder;
+    }
 
     private void Update()
     {

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7988069201522501649}
   - component: {fileID: 4922420790715160822}
   - component: {fileID: 4461075892307523439}
-  - component: {fileID: 8350239074535677542}
+  - component: {fileID: 4423313854055425994}
   m_Layer: 5
   m_Name: Crossfade
   m_TagString: Untagged
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!95 &8350239074535677542
+--- !u!95 &4423313854055425994
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6dba9e0b95c94c44862796165c2efa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 8350239074535677542}
+  animator: {fileID: 4423313854055425994}
   transitionTime: 1
 --- !u!1 &6837962408315626774
 GameObject:
@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 3879226443420690751}
   - component: {fileID: 5143669554226133466}
   - component: {fileID: 1608626625127072512}
+  - component: {fileID: 1384455388961942793}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -239,3 +240,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &1384455388961942793
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837962408315626774}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

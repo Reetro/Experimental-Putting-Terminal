@@ -1,18 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Reflector : MonoBehaviour
+public class Reflector : ObstalcleBase
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-    }
+        if (IsObjectBall(collision.gameObject))
+        {
+            var ballRigidbody2D = GetBallRigidBody(collision.gameObject);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            if (ballRigidbody2D)
+            {
+                var ball = GetBallComponent(collision.gameObject);
+
+                ContactPoint2D contactPoint2D = collision.contacts[0];
+
+                Vector2 newVelocity = Vector2.Reflect(ball.GetCurrentVelocity(), contactPoint2D.normal);
+
+                ballRigidbody2D.velocity = newVelocity;
+            }
+        }
     }
 }

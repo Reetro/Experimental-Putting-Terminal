@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: 89ed6e4953ec616448187b594acdc673
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5008447176737472957
+    second: Colored Blocks_0
+  - first:
+      213: -1898051587264242034
+    second: Colored Blocks_1
+  - first:
+      213: -7347984029124877983
+    second: Colored Blocks_2
+  - first:
+      213: 8519689954425304507
+    second: Colored Blocks_3
+  - first:
+      213: -6052525784470798216
+    second: Colored Blocks_4
+  - first:
+      213: -7320155947021580739
+    second: Colored Blocks_5
+  - first:
+      213: -8348638718088502028
+    second: Colored Blocks_6
+  - first:
+      213: 1874635060062751432
+    second: Colored Blocks_7
+  - first:
+      213: -7436780467758912999
+    second: Colored Blocks_8
+  - first:
+      213: -8553795190291473745
+    second: Colored Blocks_9
+  - first:
+      213: 5282586910931490766
+    second: Colored Blocks_10
+  - first:
+      213: 1040419088525087687
+    second: Colored Blocks_11
+  - first:
+      213: -3526178892489824983
+    second: Colored Blocks_12
+  - first:
+      213: 4568017592913193789
+    second: Colored Blocks_13
+  - first:
+      213: -494212342145605699
+    second: Colored Blocks_14
+  - first:
+      213: 1227333571763198623
+    second: Colored Blocks_15
+  - first:
+      213: 3096303201102879606
+    second: Colored Blocks_16
+  - first:
+      213: -6016673001494421374
+    second: Colored Blocks_17
+  - first:
+      213: -5292573966436224875
+    second: Colored Blocks_18
+  - first:
+      213: -5398749517604417633
+    second: Colored Blocks_19
+  - first:
+      213: -273723197294369852
+    second: Colored Blocks_20
+  - first:
+      213: -5341094989999899044
+    second: Colored Blocks_21
+  - first:
+      213: -2526709820678192239
+    second: Colored Blocks_22
+  - first:
+      213: -3435692339264695199
+    second: Colored Blocks_23
+  - first:
+      213: -727843807726532463
+    second: Colored Blocks_24
+  - first:
+      213: 4609237640263898276
+    second: Colored Blocks_25
+  - first:
+      213: 5386555669594983920
+    second: Colored Blocks_26
+  - first:
+      213: 3381298983762214347
+    second: Colored Blocks_27
+  - first:
+      213: 1282004174543926210
+    second: Colored Blocks_28
+  - first:
+      213: -782354544401708589
+    second: Colored Blocks_29
+  - first:
+      213: 7142085209527113705
+    second: Colored Blocks_30
+  - first:
+      213: -1064941730778325531
+    second: Colored Blocks_31
+  - first:
+      213: 1348902054964057383
+    second: Colored Blocks_32
+  - first:
+      213: -828573942584773698
+    second: Colored Blocks_33
+  - first:
+      213: -161808803425934315
+    second: Colored Blocks_34
+  - first:
+      213: -3262858714924206992
+    second: Colored Blocks_35
+  - first:
+      213: -4216605018768658653
+    second: Colored Blocks_36
+  - first:
+      213: 1876024566562884246
+    second: Colored Blocks_37
+  - first:
+      213: 1637717496312349478
+    second: Colored Blocks_38
+  - first:
+      213: -8580772778608919662
+    second: Colored Blocks_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

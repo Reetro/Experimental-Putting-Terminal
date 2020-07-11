@@ -1,18 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public LevelLoader levelLoader = null;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (IsObjectBall(collision.gameObject))
+        {
+            // TODO MAKE UI FOR LOAD NEXT LEVEL
+            levelLoader.StartLevelLoad();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool IsObjectBall(GameObject objectToTest)
     {
-        
+        return objectToTest.layer == LayerMask.NameToLayer("Ball");
     }
 }

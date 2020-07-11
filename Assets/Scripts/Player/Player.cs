@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 
-public class StaticPlayer : MonoBehaviour
+public class Player : MonoBehaviour
 {
     Camera mainCam;
     Vector2 mousePosition = Vector2.zero;
 
     public GameObject ballPrefab;
     public Transform spawnTransform;
-    public int playerBallCount = 1;
-    public float ballSpeed = 2;
+    [SerializeField] private int playerBallCount = 1;
+    [SerializeField] private float ballSpeed = 2;
+    [SerializeField] private float ballLifeTime = 3f;
 
     void Awake()
     {
@@ -28,6 +29,11 @@ public class StaticPlayer : MonoBehaviour
         }
     }
 
+    public void addToPlayerBallCount()
+    {
+        playerBallCount = Mathf.Clamp(playerBallCount + 1, 0, 1);
+    }
+
     public void SpawnBall()
     {
         bool cantSpawn = playerBallCount <= 0;
@@ -36,7 +42,7 @@ public class StaticPlayer : MonoBehaviour
         {
             var ball = Instantiate(ballPrefab, (Vector2)spawnTransform.position, spawnTransform.rotation);
 
-            ball.GetComponent<Ball>().ThrowBall(ballSpeed, this);
+            ball.GetComponent<Ball>().ThrowBall(ballSpeed, this, ballLifeTime);
 
             playerBallCount--;
         }

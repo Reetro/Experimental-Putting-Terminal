@@ -7,6 +7,13 @@ public class Destroyer : ObstalcleBase
         if (IsObjectBall(collision.gameObject))
         {
             Destroy(collision.gameObject);
+
+            var player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+            if (player)
+            {
+                player.addToPlayerBallCount();
+            }
         }
     }
 }

@@ -8,6 +8,8 @@ public class Hole : MonoBehaviour
     {
         if (IsObjectBall(collision.gameObject))
         {
+            Destroy(collision.gameObject);
+
             // TODO MAKE UI FOR LOAD NEXT LEVEL
             levelLoader.StartLevelLoad();
         }

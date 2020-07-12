@@ -25,12 +25,15 @@ public class LevelLoader : MonoBehaviour
     {
         StartCoroutine(LoadNextLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
-    /// <summary>
-    /// TODO CREATE A GAMEOVER SCREEN WHEN PLAYER REACHES THE LAST LEVEL
-    /// </summary>
-    public void LoadGameOver()
+
+    public void LoadStart()
     {
-        Debug.LogWarning("Need an end level screen");
+        SceneManager.LoadScene(1);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     private IEnumerator LoadNextLevel(int levelIndex)

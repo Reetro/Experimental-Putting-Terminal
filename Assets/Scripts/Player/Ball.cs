@@ -9,11 +9,15 @@ public class Ball : MonoBehaviour
     private float lifeTime = 3f;
     private Player player;
     private float maxSpeed = 10f;
+    [SerializeField] AudioClip[] ballSounds = null;
     private Slider playerSlider;
+    private AudioSource myAudioSorce;
 
     void Awake()
     {
         myRigidBody2d = GetComponent<Rigidbody2D>();
+
+        myAudioSorce = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -88,10 +92,19 @@ public class Ball : MonoBehaviour
         return currentVelocity;
     }
 
+    private void PlaySound()
+    {
+        AudioClip clip = ballSounds[UnityEngine.Random.Range(0, ballSounds.Length)];
+
+        myAudioSorce.PlayOneShot(clip);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.transform.gameObject.CompareTag("Fan"))
+        if (!collision.transform.gameObject.CompareTag("Fan") && !collision.transform.gameObject.CompareTag("Hole"))
         {
+            PlaySound();
+
             ContactPoint2D contactPoint2D = collision.contacts[0];
 
             Vector2 newVelocity = Vector2.Reflect(GetCurrentVelocity(), contactPoint2D.normal);

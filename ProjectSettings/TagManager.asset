@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fan
   - Level Loader
+  - Hole
   layers:
   - Default
   - TransparentFX

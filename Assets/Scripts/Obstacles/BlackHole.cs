@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class BlackHole : ObstalcleBase
@@ -9,10 +7,27 @@ public class BlackHole : ObstalcleBase
 
     private GameObject overlappedBall = null;
 
+    [SerializeField] AudioClip[] dragSounds = null;
+    private AudioSource myAudioSorce;
+
+    private void Awake()
+    {
+        myAudioSorce = GetComponent<AudioSource>();
+    }
+
+    private void PlayDragSound()
+    {
+        AudioClip clip = dragSounds[Random.Range(0, dragSounds.Length)];
+
+        myAudioSorce.PlayOneShot(clip);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (IsObjectBall(collision.gameObject))
         {
+            PlayDragSound();
+
             overlappedBall = collision.gameObject;
         }
     }

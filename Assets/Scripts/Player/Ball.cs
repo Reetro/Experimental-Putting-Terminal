@@ -101,7 +101,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.transform.gameObject.CompareTag("Fan") && !collision.transform.gameObject.CompareTag("Hole") && !!collision.transform.gameObject.CompareTag("Wall"))
+        if (!collision.transform.gameObject.CompareTag("Fan") && !collision.transform.gameObject.CompareTag("Hole") && !collision.transform.gameObject.CompareTag("Wall"))
         {
             PlaySound();
 

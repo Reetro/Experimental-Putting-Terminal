@@ -443,6 +443,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7568630946441243199, guid: 2d4591077da85cf43a238b4b7b43ed9a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568630946441243199, guid: 2d4591077da85cf43a238b4b7b43ed9a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d4591077da85cf43a238b4b7b43ed9a, type: 3}
 --- !u!4 &517202750 stripped
@@ -527,6 +537,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7618826990713712605, guid: ee52236599c939348a5d080704e0ee6a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.078
+      objectReference: {fileID: 0}
     - target: {fileID: 7618826990713712606, guid: ee52236599c939348a5d080704e0ee6a,
         type: 3}
       propertyPath: m_BoundingShape2D
@@ -536,6 +551,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618826990713712607, guid: ee52236599c939348a5d080704e0ee6a,
+        type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 7618826990861684371, guid: ee52236599c939348a5d080704e0ee6a,
         type: 3}
@@ -596,6 +616,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618826991639239434, guid: ee52236599c939348a5d080704e0ee6a,
+        type: 3}
+      propertyPath: orthographic size
+      value: 2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618826991639239435, guid: ee52236599c939348a5d080704e0ee6a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.078
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618826991940115425, guid: ee52236599c939348a5d080704e0ee6a,
+        type: 3}
+      propertyPath: m_FollowOffset.y
+      value: -0.068
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee52236599c939348a5d080704e0ee6a, type: 3}

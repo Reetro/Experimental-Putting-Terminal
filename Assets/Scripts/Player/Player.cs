@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float ballSpeed = 2;
     [SerializeField] private float ballLifeTime = 3f;
     [SerializeField] private float ballMaxSpeed = 10f;
+    [SerializeField] private Slider slider = null;
 
     void Awake()
     {
@@ -43,7 +45,7 @@ public class Player : MonoBehaviour
         {
             var ball = Instantiate(ballPrefab, (Vector2)spawnTransform.position, spawnTransform.rotation);
 
-            ball.GetComponent<Ball>().ThrowBall(ballSpeed, this, ballLifeTime, ballMaxSpeed);
+            ball.GetComponent<Ball>().ThrowBall(ballSpeed, this, ballLifeTime, ballMaxSpeed, slider);
 
             playerBallCount--;
         }

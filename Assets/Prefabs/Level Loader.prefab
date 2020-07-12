@@ -165,6 +165,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4423313854055425994}
   transitionTime: 1
+  blockSounds:
+  - {fileID: 8300000, guid: 0fa57c751ed1d4e4ca922ccb6f03f344, type: 3}
+  - {fileID: 8300000, guid: 993a7b2777670b04a8138cddbd9878c6, type: 3}
+  - {fileID: 8300000, guid: 92abaaf97fc85fb428af6bbb7ae0c415, type: 3}
 --- !u!1 &6837962408315626774
 GameObject:
   m_ObjectHideFlags: 0

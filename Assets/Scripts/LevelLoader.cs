@@ -7,6 +7,14 @@ public class LevelLoader : MonoBehaviour
     public Animator animator;
     public float transitionTime = 1f;
 
+    [SerializeField] AudioClip[] blockSounds = null;
+    private AudioSource myAudioSorce;
+
+    private void Awake()
+    {
+        myAudioSorce = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         // Debug code
@@ -28,11 +36,15 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadStart()
     {
+        PlaySound();
+
         SceneManager.LoadScene(1);
     }
 
     public void QuitGame()
     {
+        PlaySound();
+
         Application.Quit();
     }
 
@@ -43,5 +55,12 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(levelIndex);
+    }
+
+    private void PlaySound()
+    {
+        AudioClip clip = blockSounds[Random.Range(0, blockSounds.Length)];
+
+        myAudioSorce.PlayOneShot(clip);
     }
 }
